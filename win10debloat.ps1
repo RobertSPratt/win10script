@@ -12,7 +12,7 @@
 #
 #	Addition: One command to rule them all, One command to find it, and One command to Run it! 
 #
-#     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
+#     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJMWh')"
 #
 #	Chris Titus Additions:
 #
@@ -34,6 +34,11 @@
 #	- Installs/Enables OneDrive
 #	- Enables Adobe Flash
 #	- Does not install Linux Subsystem
+#	- Does not install Notepad++
+#	- Installs Vim
+#	- Installs Firefox
+#	- Installs Google Chrome
+#
 ##########
 # Default preset
 $tweaks = @(
@@ -44,8 +49,11 @@ $tweaks = @(
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"InstallAdobe",
 	"Install7Zip",
-	"InstallNotepadplusplus",
+	# "InstallNotepadplusplus",
 	"InstallMediaPlayerClassic",
+	"InstallVim",
+	"InstallFirefox",
+	"InstallChrome",
 
 	### Windows Apps
 	"DebloatAll",
@@ -226,6 +234,7 @@ Function Install7Zip {
 	Write-Output "Installing 7-Zip"
 	choco install 7zip -y
 }
+
 ########
 #Function InstallNotepadplusplus {
 #	Write-Output "Installing Notepad++"
@@ -233,14 +242,24 @@ Function Install7Zip {
 #}
 ########
 
+Function InstallMediaPlayerClassic {
+	Write-Output "Installing Media Player Classic (VLC Alternative)"
+	choco install mpc-hc -y
+}
+
 Function InstallVim {
 	Write-Output "Installing Vim"
 	choco install vim -y
 }
 
-Function InstallMediaPlayerClassic {
-	Write-Output "Installing Media Player Classic (VLC Alternative)"
-	choco install mpc-hc -y
+Function InstallFirefox {
+	Write-Output "Installing Firefox"
+	choco install firefox -y
+}
+
+Function InstallChrome {
+	Write-Output "Installing Google Chrome"
+	choco install googlechrome -y
 }
 
 ##########
