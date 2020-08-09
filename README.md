@@ -9,6 +9,10 @@
  - Installs/Enables OneDrive
  - Enables Adobe Flash
  - Does not install Linux Subsystem
+ - Does not Install Notepad++
+ - Installs Vim
+ - Installs Firefox
+ - Installs Google Chrome
 
 
 # Original Chris Titus ReadMe
